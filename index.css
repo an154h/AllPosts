@@ -1,0 +1,237 @@
+/* -------------------------------
+   RESET & BASE STYLES
+--------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------
+   CONTAINERS & LAYOUT
+--------------------------------- */
+.centered-container {
+  flex: 1;
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 1200px) {
+  .centered-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.main-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* -------------------------------
+   HEADER
+--------------------------------- */
+header {
+  background-color: var(--header-bg);
+  padding: 15px 20px;
+  color: var(--header-text);
+  width: 100%;
+}
+
+header nav a {
+  margin-right: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------------
+   FOOTER
+--------------------------------- */
+footer {
+  background-color: var(--footer-bg);
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--footer-text);
+  width: 100%;
+}
+
+/* -------------------------------
+   LINKS
+--------------------------------- */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+/* -------------------------------
+   FORM ELEMENTS
+--------------------------------- */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+form button {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--button-hover);
+}
+
+/* -------------------------------
+   POST LIST
+--------------------------------- */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: var(--card-bg);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------------------
+   SEARCH BAR
+--------------------------------- */
+.search-bar {
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+/* -------------------------------
+   RESPONSIVE
+--------------------------------- */
+@media (max-width: 600px) {
+  .main-content,
+  .centered-container {
+    padding: 10px;
+  }
+}
+
+/* -------------------------------
+   THEME VARIABLES (LIGHT)
+--------------------------------- */
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --link-color: #0077cc;
+  --link-hover: #005fa3;
+  --header-bg: #333;
+  --header-text: white;
+  --footer-bg: white;
+  --footer-text: #666;
+  --card-bg: white;
+  --border-color: #ccc;
+  --button-bg: #0077cc;
+  --button-hover: #005fa3;
+}
+
+/* -------------------------------
+   THEME VARIABLES (DARK MODE)
+--------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1e1e1e;
+    --text-color: #eee;
+    --link-color: #66aaff;
+    --link-hover: #99cfff;
+    --header-bg: #121212;
+    --header-text: #fff;
+    --footer-bg: #2c2c2c;
+    --footer-text: #aaa;
+    --card-bg: #2a2a2a;
+    --border-color: #444;
+    --button-bg: #3388ff;
+    --button-hover: #2675d7;
+  }
+}
+
+/* -------------------------------
+  ADDITIONS
+--------------------------------- */
+html, body, #root {
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+}
+
+.home-hero-box {
+  background-color: var(--card-bg);
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.home-hero-box h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.home-hero-box p {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-bg);
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
