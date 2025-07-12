@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./Posts-Exercise/components/Header";
-import Footer from "./Posts-Exercise/components/Footer";
-import PostDetail from "./Posts-Exercise/components/PostDetail";
-import EditPost from "./Posts-Exercise/components/EditPost";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import PostDetail from "./components/PostDetail";
+import EditPost from "./components/EditPost";
 
-import Home from "./Posts-Exercise/pages/Home";
-import About from "./Posts-Exercise/pages/About";
-import AllPosts from "./Posts-Exercise/pages/AllPosts";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import AllPosts from "./pages/AllPosts";
 
 
 import './index.css';
